@@ -6,22 +6,44 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <View
-        android:id="@+id/viewGrey"
-        android:layout_width="125dp"
-        android:layout_height="125dp"
-        android:background="@color/material_dynamic_neutral50"
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Escribe tu nombre"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Presioname"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-    <View
-        android:id="@+id/viewBlack"
-        android:layout_width="125dp"
-        android:layout_height="125dp"
-        android:background="@color/material_dynamic_primary0"
-        cons app:layout_constraintStart_toEndOf="@id/viewGrey"
-        const app:layout_constraintBottom_toBottomOf="@id/viewGrey"
-        />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:ems="10"
+        android:inputType="text"
+        android:maxLines="1"
+        android:singleLine="true"
+        app:layout_constraintBottom_toTopOf="@id/button1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteX="100dp"
+        tools:layout_editor_absoluteY="259dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
