@@ -84,7 +84,7 @@
         android:id="@+id/cardAltura"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="20dp"
         app:cardBackgroundColor="@color/background_component"
         app:cardCornerRadius="16dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -131,7 +131,7 @@
         android:id="@+id/cvPeso"
         android:layout_width="0dp"
         android:layout_height="150dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         app:cardBackgroundColor="@color/background_component"
         app:cardCornerRadius="16dp"
@@ -152,13 +152,34 @@
                 android:textSize="17sp"/>
 
             <TextView
+                android:id="@+id/tvShowWeight"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="50"
+                tools:text="50"
                 android:textSize="30sp"/>
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="30dp">
+                android:layout_height="wrap_content"
+                android:gravity="center">
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/btSubstractWeight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="17dp"
+                    app:backgroundTint="@color/purple"
+                    android:src="@drawable/ic_back"
+                    android:tintMode="@color/white"
+                    app:fabCustomSize="40dp"
+                    />
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/btAddWeight"
+                    android:src="@drawable/ic_next"
+                    android:tintMode="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:backgroundTint="@color/purple"
+                    app:fabCustomSize="40dp"/>
+
 
             </LinearLayout>
 
@@ -176,7 +197,66 @@
         app:layout_constraintStart_toEndOf="@id/cvPeso"
         app:layout_constraintTop_toTopOf="@id/cvPeso">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EDAD"
+                android:textColor="@color/white"
+                android:textSize="17sp"/>
+
+            <TextView
+                android:id="@+id/tvShowAge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="25"
+                android:textSize="30sp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/btSubstractAge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_back"
+                    android:tintMode="@color/white"
+                    android:layout_marginEnd="17dp"
+                    app:backgroundTint="@color/purple"
+                    app:fabCustomSize="40dp"
+                    />
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/btAddAge"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/ic_next"
+                    android:tintMode="@color/white"
+                    android:layout_height="wrap_content"
+                    app:backgroundTint="@color/purple"
+                    app:fabCustomSize="40dp"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
     </androidx.cardview.widget.CardView>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonCalculate"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:textSize="25sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:background="@color/purple"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cvPeso"
+        android:layout_marginTop="30dp"
+        android:text="Calcular"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_app"
+    android:padding="16dp"
+    tools:context=".imccalculator.ResultImcActivity">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_marginTop="20dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Resultado"
+
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/cvResult"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvResult"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginVertical="30dp"
+        app:cardCornerRadius="16dp"
+        app:cardBackgroundColor="@color/background_component"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintBottom_toTopOf="@id/buttonReCalculate">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="25dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tvType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="NORMAL"
+                android:textSize="27sp"
+                android:textStyle="bold"
+                android:textColor="@color/green"/>
+            <TextView
+                android:id="@+id/tvImc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="24.2"
+                android:textSize="90sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/tvDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                tools:text="saodjoaisj jasoidjoasi jdsfjske jsdfkj s ksjd  jaosidj a joasijdoi"
+                android:textSize="26sp"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonReCalculate"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:background="@color/purple"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cvResult"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="30dp"
+        android:text="calcular nuevamente"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
