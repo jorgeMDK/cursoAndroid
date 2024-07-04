@@ -17,6 +17,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="App Calculadora IMC"/>
+    <Button
+        android:id="@+id/btnListaTareas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lista de tareas "/>
 
 
 </LinearLayout>
